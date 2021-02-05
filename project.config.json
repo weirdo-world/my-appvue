@@ -40,6 +40,8 @@
   "compileType": "miniprogram",
   "appid": "wxd280bad629843dfe",
   "projectname": "my-appvue",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
       "list": []

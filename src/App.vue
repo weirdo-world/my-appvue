@@ -2,6 +2,10 @@
 
 </script>
 <!-- 全局样式 -->
-<style>
 
+<style>
+page{
+  width: 100%;
+  height: 100%;
+}
 </style>

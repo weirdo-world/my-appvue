@@ -1,5 +1,29 @@
 {
-  "pages": [
-    "pages/home/main"
-  ]
+    "pages": [
+    "pages/home/main",
+    "pages/personal/main"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "weirdo",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2c2c2c",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/main",
+        "text": "主页",
+        "iconPath": "/static/tabs/home.png",
+        "selectedIconPath": "/static/tabs/home-active.png"
+      },
+      {
+        "pagePath": "pages/personal/main",
+        "text": "个人中心",
+        "iconPath": "/static/tabs/me.png",
+        "selectedIconPath": "/static/tabs/me-active.png"
+      }
+    ]
+  }
 }
