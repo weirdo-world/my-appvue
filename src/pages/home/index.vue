@@ -1,56 +1,43 @@
 <template>
   <div class="homeContainer">
-    <div class="search-top">
-      <img src="/static/images/search.png">
-      <input confirm-type="search" placeholder="输入名称搜索">
-    </div>
     <swiper class="banner" indicator-dots autoplay="true" indicator-color="#F8F8FF" indicator-active-color="#228B22">
-      <swiper-item>
-        <img src="/static/images/banner/banner01.jpg" mode="scaleToFill">
-      </swiper-item>
-      <swiper-item>
-        <img src="/static/images/banner/banner02.jpg" mode="scaleToFill">
-      </swiper-item>
-      <swiper-item>
-        <img src="/static/images/banner/banner01.jpg" mode="scaleToFill">
-      </swiper-item>
-      <swiper-item>
-        <img src="/static/images/banner/banner02.jpg" mode="scaleToFill">
-      </swiper-item>
+      <div v-for="(item,index) in bannerSrc">
+        <swiper-item>
+          <img :src="item" alt="" @click="toSearch" mode="scaleToFill">
+        </swiper-item>
+      </div>
     </swiper>
   </div>
 </template>
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      bannerSrc: ['/static/images/banner/banner01.jpg', '/static/images/banner/banner02.jpg']
+    }
+  },
+  methods: {
+    toSearch () {
+      wx.navigateTo({ // 跳转页面
+        url: '/pages/search/main'
+      })
+    }
+  }
+
+}
 </script>
 <style>
 .homeContainer {
   background-color: #F8F7FA;
 }
-.search-top{
-  display: flex;
-  width: 80%;
-  margin: auto;
-  height: 60rpx;
-  padding: 10rpx;
-  border-bottom: 3rpx solid #ff4500;
 
-}
-.search-top img{
-  width: 60rpx;
-  height: 60rpx;
-}
-.search-top input{
-  height: 60rpx;
+.banner {
+  margin: 10px 0;
   width: 100%;
-  padding-left: 10rpx;
+  height: 200px;
 }
-.banner{
-  margin: 10rpx 0;
-  width: 100%;
-  height: 350rpx;
-}
-.banner img{
+
+.banner img {
   width: 100%;
   height: 100%;
 }
