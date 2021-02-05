@@ -15,15 +15,16 @@
       {
         "pagePath": "pages/home/main",
         "text": "主页",
-        "iconPath": "/static/tabs/home.png",
-        "selectedIconPath": "/static/tabs/home-active.png"
+        "iconPath": "/static/images/tabs/home.png",
+        "selectedIconPath": "/static/images/tabs/home-active.png"
       },
       {
         "pagePath": "pages/personal/main",
         "text": "个人中心",
-        "iconPath": "/static/tabs/me.png",
-        "selectedIconPath": "/static/tabs/me-active.png"
+        "iconPath": "/static/images/tabs/me.png",
+        "selectedIconPath": "/static/images/tabs/me-active.png"
       }
     ]
   }
+
 }
